@@ -1,0 +1,494 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@font-face {
+  font-family: "Cerebri Sans Pro";
+  src: url("/fonts/.woff2") format("woff2"), url("/fonts/.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "normal";
+  src: url("/fonts/.woff2") format("woff2"), url("/fonts/.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "normal";
+  src: url("/fonts/.woff2") format("woff2"), url("/fonts/.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "CerebriSansPro-Regular";
+  src: url("/fonts/.woff2") format("woff2"), url("/fonts/.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Palatino Linotype";
+  src: url("/fonts/PalatinoLinotype-Roman.woff2") format("woff2"), url("/fonts/PalatinoLinotype-Roman.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Palatino Linotype";
+  src: url("/fonts/PalatinoLinotype-Italic.woff2") format("woff2"), url("/fonts/PalatinoLinotype-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Palatino Linotype";
+  src: url("/fonts/PalatinoLinotype-Bold.woff2") format("woff2"), url("/fonts/PalatinoLinotype-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Palatino Linotype";
+  src: url("/fonts/PalatinoLinotype-BoldItalic.woff2") format("woff2"), url("/fonts/PalatinoLinotype-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Palatino CE";
+  src: url("/fonts/PalatinoCE-Regular.woff2") format("woff2"), url("/fonts/PalatinoCE-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Palatino CE";
+  src: url("/fonts/PalatinoCE-Bold.woff2") format("woff2"), url("/fonts/PalatinoCE-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Palatino CE";
+  src: url("/fonts/PalatinoCE-BoldItalic.woff2") format("woff2"), url("/fonts/PalatinoCE-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Palatino CE";
+  src: url("/fonts/PalatinoCE-Italic.woff2") format("woff2"), url("/fonts/PalatinoCE-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+/* styles/globals.scss */
+main > section {
+  margin-bottom: 64px;
+}
+
+nav {
+  border-bottom: 1px solid #EEE5DD;
+  margin-block-start: 30px;
+  margin-block-end: 10px;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+nav ul li {
+  margin-bottom: 10px;
+  position: relative;
+}
+nav ul li a {
+  color: #444341;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Albert Sans", sans-serif;
+  padding: 0 10px;
+}
+nav ul li::after {
+  content: "";
+  width: 100%;
+  max-width: 100%;
+  height: 3px;
+  background-color: #f5ba24;
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  z-index: 2;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.3s ease-in-out;
+  display: none;
+}
+nav ul li:hover a {
+  color: #b16b1b;
+}
+nav ul li:hover::after {
+  display: block;
+  transform: scaleX(1);
+  color: #f5ba24;
+}
+nav ul li.active a {
+  color: #b16b1b;
+}
+nav ul li.active::after {
+  display: block;
+  transform: scaleX(1);
+  color: #f5ba24;
+}
+
+.bottom-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 20px;
+}
+.bottom-header .logo {
+  max-width: 750px;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 700;
+  color: #444341;
+  text-decoration: none;
+}
+.bottom-header .logo ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.login-options ul {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.login-options ul li {
+  position: relative;
+}
+.login-options ul li button {
+  font-size: 18px;
+  font-family: "Albert Sans", sans-serif;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.hero-banner {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.hero-banner .inner-content-wrapper {
+  max-width: 100%;
+  padding: 15px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(270deg, rgba(67, 47, 22, 0) 26.8%, #432f16 84.12%);
+}
+.hero-banner .inner-content {
+  max-width: 670px;
+  width: 100%;
+  margin: 0 30px;
+}
+.hero-banner .inner-content h1 {
+  font-family: "Palatino", serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 50px;
+  color: #FFFEFC;
+}
+.hero-banner .inner-content h1 span {
+  color: #F1AD00;
+}
+
+.search-tab {
+  font-family: "Albert Sans", sans-serif;
+  margin-bottom: 20px;
+}
+.search-tab .tab-button {
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+}
+.search-tab .tab-button .btns-wrapper {
+  background: #ffffff;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  margin-bottom: -1px;
+}
+.search-tab .tab-button button {
+  color: #aa9b8b;
+  font-size: 16px;
+  padding: 5px 20px;
+  background: #EEE5DD;
+  font-family: "Albert Sans", sans-serif;
+}
+.search-tab .tab-button button.active {
+  background: #ffffff;
+  color: #1c1c1c;
+  font-weight: 600;
+}
+.search-tab .input-search input {
+  width: 100%;
+  padding: 20px 20px;
+  font-size: 16px;
+  border-radius: 0 10px 10px 10px;
+  background: #ffffff;
+  color: #1c1c1c;
+  outline: none;
+  border: none;
+  font-family: "Albert Sans", sans-serif;
+}
+
+.bg-fill {
+  background: #f5ba24;
+  color: #1c1c1c !important;
+  color: #ffffff;
+  padding: 10px 35px;
+  text-decoration: none !important;
+  border-radius: 40px;
+  font-family: "Albert Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.advance-search-btn a {
+  font-size: 18px;
+  color: #E5E1D5;
+  font-weight: 600;
+  text-decoration: underline;
+  font-family: "Albert Sans", sans-serif;
+}
+
+.unveiling {
+  max-width: 890px;
+  margin: auto;
+  text-align: center;
+  color: #444341;
+}
+.unveiling h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #444341;
+}
+.unveiling p {
+  font-size: 16px;
+  font-family: "Albert Sans", sans-serif;
+}
+.unveiling .img-wrraper {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.head,
+.head h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #444341;
+}
+
+.head p {
+  font-size: 16px;
+  font-family: "Cerebri Sans Pro", serif;
+}
+
+.manuscripts > ul {
+  max-width: 1140px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.manuscripts > ul > li:not(:last-child) {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #E5E1D5;
+}
+.manuscripts > ul > li .maybecards {
+  font-family: "Albert Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+.manuscripts > ul > li .maybecards * {
+  font-family: "Albert Sans", sans-serif;
+  font-size: 18px;
+  color: #1c1c1c;
+}
+.manuscripts > ul > li .maybecards h2 {
+  margin: 0;
+}
+.manuscripts > ul > li .maybecards a {
+  color: #1c1c1c;
+  text-decoration: underline;
+}
+.manuscripts > ul > li .thumb {
+  flex: 0 0 320px;
+  position: relative;
+}
+.manuscripts > ul > li .thumb .thumb-bg-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 80%;
+  z-index: -1;
+  text-align: center;
+}
+.manuscripts > ul > li .thumb .thumb-bg-circle img {
+  width: auto;
+}
+.manuscripts > ul > li .matbecards-wrap {
+  flex: 1;
+}
+.manuscripts > ul > li .matbecards-wrap .top-sec ul {
+  display: flex;
+  gap: 50px;
+}
+
+.preview-btns {
+  margin-block: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.preview-btns .prev-btn {
+  border: 1px solid #f5ba24;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 40px;
+  transition: all 0.3s ease-in-out;
+  font-family: "Albert Sans", sans-serif;
+}
+.preview-btns .prev-btn img {
+  max-width: 24px;
+}
+.preview-btns .prev-btn:hover {
+  background: #f5ba24;
+  color: #444341;
+}
+.preview-btns .prev-btn:active {
+  transform: scale(0.9);
+}
+
+footer {
+  background: #472907;
+  padding-top: 40px;
+}
+footer * {
+  padding: 0;
+  margin: 0;
+  font-family: "Albert Sans", sans-serif;
+  color: #ffffff;
+}
+
+.foo-logo {
+  max-width: 220px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 40px;
+  padding: 8px 20px;
+}
+
+.footer-cont-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-block: 40px;
+  margin-top: 20px;
+}
+.footer-cont-wrap h2 {
+  color: #E5E1D5;
+}
+.footer-cont-wrap ul {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.footer-cont-wrap ul li {
+  flex: 0 0 calc(50% - 20px);
+  font-weight: 300;
+}
+
+.bottom-foo {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-top: 1px solid #826d56;
+}
+.bottom-foo * {
+  font-weight: 300;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Palatino", serif;
+  color: #444341;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body {
+  font-family: "Palatino", serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  margin: 0;
+}
+
+.container {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+input::-moz-placeholder {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+input::placeholder {
+  font-size: 18px;
+  font-weight: 400;
+}/*# sourceMappingURL=style.css.map */

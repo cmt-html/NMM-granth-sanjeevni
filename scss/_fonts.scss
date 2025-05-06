@@ -1,0 +1,67 @@
+// Font configuration
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+// font-family: "Albert Sans", sans-serif;
+
+$font-path: "/fonts/"; // public path to your font files
+
+$font-path: "/fonts/"; // Adjust path if needed
+
+// Font definitions: (family, weight, style, filename)
+$cerebri-sans-fonts: (
+  ("Cerebri Sans Pro", normal, normal, "CerebriSansPro-Regular")
+);
+
+$palatino-linotype-fonts: (
+  ("Palatino Linotype", normal, normal, "PalatinoLinotype-Roman"),
+  ("Palatino Linotype", normal, italic, "PalatinoLinotype-Italic"),
+  ("Palatino Linotype", bold, normal, "PalatinoLinotype-Bold"),
+  ("Palatino Linotype", bold, italic, "PalatinoLinotype-BoldItalic")
+);
+
+$palatino-ce-fonts: (
+  ("Palatino CE", normal, normal, "PalatinoCE-Regular"),
+  ("Palatino CE", bold, normal, "PalatinoCE-Bold"),
+  ("Palatino CE", bold, italic, "PalatinoCE-BoldItalic"),
+  ("Palatino CE", normal, italic, "PalatinoCE-Italic")
+);
+
+// Generic font-face mixin
+@mixin font-face($family, $weight, $style, $file) {
+  @font-face {
+    font-family: "#{$family}";
+    src: url("#{$font-path}#{$file}.woff2") format("woff2"),
+      url("#{$font-path}#{$file}.woff") format("woff");
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
+
+// Generate font-faces
+@each $family, $weight, $style, $file in $cerebri-sans-fonts {
+  @include font-face($family, $weight, $style, $file);
+}
+
+@each $family, $weight, $style, $file in $palatino-linotype-fonts {
+  @include font-face($family, $weight, $style, $file);
+}
+
+@each $family, $weight, $style, $file in $palatino-ce-fonts {
+  @include font-face($family, $weight, $style, $file);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

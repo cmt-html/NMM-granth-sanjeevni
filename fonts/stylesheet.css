@@ -1,0 +1,270 @@
+@font-face {
+    font-family: 'Cerebri Sans Pro';
+    src: url('CerebriSansPro-Regular.woff2') format('woff2'),
+        url('CerebriSansPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino-Roman Ex';
+    src: url('Palatino-RomanEx.woff2') format('woff2'),
+        url('Palatino-RomanEx.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino-Roman Th';
+    src: url('Palatino-RomanTh.woff2') format('woff2'),
+        url('Palatino-RomanTh.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino';
+    src: url('Palatino-Thin.woff2') format('woff2'),
+        url('Palatino-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palladium';
+    src: url('Palatino-Thin.woff2') format('woff2'),
+        url('Palatino-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PalatinoR';
+    src: url('PalatinoRItalic.woff2') format('woff2'),
+        url('PalatinoRItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PalatinoR';
+    src: url('PalatinoR.woff2') format('woff2'),
+        url('PalatinoR.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino-Roman';
+    src: url('Palatino-Roman.woff2') format('woff2'),
+        url('Palatino-Roman.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino-Roman Cn';
+    src: url('Palatino-RomanCn.woff2') format('woff2'),
+        url('Palatino-RomanCn.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino Linotype';
+    src: url('PalatinoLinotype-Italic.woff2') format('woff2'),
+        url('PalatinoLinotype-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino';
+    src: url('Palatino-Italic.woff2') format('woff2'),
+        url('Palatino-Italic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino-Italic Wd';
+    src: url('Palatino-ItalicWd.woff2') format('woff2'),
+        url('Palatino-ItalicWd.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino-Italic Cn';
+    src: url('Palatino-ItalicCn.woff2') format('woff2'),
+        url('Palatino-ItalicCn.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino-BoldItalic Wd';
+    src: url('Palatino-BoldItalicWd.woff2') format('woff2'),
+        url('Palatino-BoldItalicWd.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino-Bold Wd';
+    src: url('Palatino-BoldWd.woff2') format('woff2'),
+        url('Palatino-BoldWd.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino-Bold Th';
+    src: url('Palatino-BoldTh.woff2') format('woff2'),
+        url('Palatino-BoldTh.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino Small Caps';
+    src: url('PalatinoSmallCaps.woff2') format('woff2'),
+        url('PalatinoSmallCaps.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino';
+    src: url('Palatino-BoldItalic.woff2') format('woff2'),
+        url('Palatino-BoldItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino';
+    src: url('Palatino-Bold.woff2') format('woff2'),
+        url('Palatino-Bold.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino Linotype';
+    src: url('PalatinoLinotype-BoldItalic.woff2') format('woff2'),
+        url('PalatinoLinotype-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino CE';
+    src: url('PalatinoCE-Italic.woff2') format('woff2'),
+        url('PalatinoCE-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino CE';
+    src: url('PalatinoCE-BoldItalic.woff2') format('woff2'),
+        url('PalatinoCE-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino CE';
+    src: url('PalatinoCE-Bold.woff2') format('woff2'),
+        url('PalatinoCE-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino';
+    src: url('Palatino-Bold-Italic.woff2') format('woff2'),
+        url('Palatino-Bold-Italic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino';
+    src: url('Palatino-Thin-Italic.woff2') format('woff2'),
+        url('Palatino-Thin-Italic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino';
+    src: url('Palatino.woff2') format('woff2'),
+        url('Palatino.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino CE';
+    src: url('PalatinoCE-Regular.woff2') format('woff2'),
+        url('PalatinoCE-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino Linotype';
+    src: url('PalatinoLinotype-Roman.woff2') format('woff2'),
+        url('PalatinoLinotype-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino Linotype';
+    src: url('PalatinoLinotype-Italic.woff2') format('woff2'),
+        url('PalatinoLinotype-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Palatino Linotype';
+    src: url('PalatinoLinotype-Bold.woff2') format('woff2'),
+        url('PalatinoLinotype-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

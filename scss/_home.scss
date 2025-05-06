@@ -1,0 +1,257 @@
+.hero-banner {
+  position: relative;
+  border-radius: $border-radius-20;
+  overflow: hidden;
+
+  .inner-content-wrapper {
+    max-width: 100%;
+    padding: 15px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(
+      270deg,
+      rgba(67, 47, 22, 0) 26.8%,
+      #432f16 84.12%
+    );
+  }
+
+  .inner-content {
+    max-width: 670px;
+    width: 100%;
+
+    margin: 0 30px;
+
+    h1 {
+      font-family: $palatino;
+      font-size: $font-64;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 50px;
+      color: $off-white;
+
+      span {
+        color: $mango;
+      }
+    }
+  }
+}
+
+.search-tab {
+  font-family: $albert;
+  margin-bottom: 20px;
+
+  .tab-button {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+
+    .btns-wrapper {
+      background: $white;
+      border-radius: 5px 5px 0 0;
+      overflow: hidden;
+      border: none;
+      outline: none;
+      margin-bottom: -1px;
+    }
+
+    button {
+      color: #aa9b8b;
+      font-size: $font-16;
+      padding: 5px 20px;
+      background: $gray;
+      font-family: $albert;
+
+      &.active {
+        background: $white;
+        color: $dark;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .input-search {
+    input {
+      width: 100%;
+      padding: 20px 20px;
+      font-size: $font-16;
+      border-radius: 0 10px 10px 10px;
+      background: $white;
+      color: $dark;
+      outline: none;
+      border: none;
+      font-family: $albert;
+    }
+  }
+}
+
+.bg-fill {
+  background: $primary-color;
+  color: $dark !important;
+  color: $white;
+  padding: 10px 35px;
+  text-decoration: none !important;
+
+  border-radius: $border-radius-40;
+  font-family: $albert;
+  font-size: $font-18;
+  font-weight: 500;
+}
+
+.advance-search-btn {
+  a {
+    font-size: $font-18;
+    color: $d5;
+    font-weight: 600;
+    text-decoration: underline;
+    font-family: $albert;
+  }
+}
+
+.unveiling {
+  max-width: 890px;
+  margin: auto;
+  text-align: center;
+  color: $black;
+
+  h2 {
+    font-size: $font-42;
+    font-weight: 700;
+    color: $black;
+  }
+
+  p {
+    font-size: $font-16;
+    // font-family: $cerebri;
+    font-family: $albert;
+  }
+
+  .img-wrraper {
+    overflow: hidden;
+    border-radius: $border-radius-20;
+  }
+}
+
+.head,
+.head h2 {
+  font-size: $font-42;
+  font-weight: 700;
+  color: $black;
+}
+
+.head p {
+  font-size: $font-16;
+  font-family: $cerebri;
+}
+
+.manuscripts {
+  > ul {
+    max-width: 1140px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    > li {
+      &:not(:last-child) {
+        padding-bottom: 40px;
+        border-bottom: 1px solid $d5;
+      }
+
+      .maybecards {
+        font-family: $albert;
+        display: flex;
+        align-items: center;
+        gap: 60px;
+
+        * {
+          font-family: $albert;
+          font-size: $font-18;
+          color: $dark;
+        }
+
+        h2 {
+          margin: 0;
+        }
+
+        a {
+          color: $dark;
+          text-decoration: underline;
+        }
+      }
+
+      .thumb {
+        flex: 0 0 320px;
+        position: relative;
+        // img {
+        //   backdrop-filter: blur(7.3555169105529785px);
+        // }
+
+        .thumb-bg-circle {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          height: 80%;
+          z-index: -1;
+          text-align: center;
+
+          img {
+            width: auto;
+          }
+        }
+      }
+
+      .matbecards-wrap {
+        flex: 1;
+
+        .top-sec {
+          ul {
+            display: flex;
+            gap: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.preview-btns {
+  margin-block: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  .prev-btn {
+    border: 1px solid $primary-color;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border-radius: $border-radius-40;
+    transition: all 0.3s ease-in-out;
+    font-family: $albert;
+
+    img {
+      max-width: 24px;
+    }
+
+    &:hover {
+      background: $primary-color;
+      color: $black;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}

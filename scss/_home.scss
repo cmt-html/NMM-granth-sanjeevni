@@ -254,4 +254,15 @@
       transform: scale(0.9);
     }
   }
+
+  a {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: $black;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
 }

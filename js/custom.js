@@ -7,12 +7,6 @@ const MainObj = {
   },
 };
 
-
-
-
-
-
-
 $(document).ready(function () {
   const searchTab = document.querySelector(".search-tab");
 
@@ -37,6 +31,27 @@ $(document).ready(function () {
           MainObj.focusOnInput(".input-search input");
         }
       });
+    }
+  });
+});
+
+
+
+
+$(document).ready(function () {
+  // Dropdown handling
+  $(".wrap button").on("click", function (e) {
+    console.log("clicked");
+    e.preventDefault();
+    let $dropdown = $(this).siblings("div.select");
+    $dropdown.slideToggle();
+    $(this).toggleClass("active");
+    $("div.select").not($dropdown).slideUp();
+  });
+
+  $(document).on("click", function (e) {
+    if (!$(e.target).closest("button, div.select").length) {
+      $("div.select").slideUp();
     }
   });
 });

@@ -62,9 +62,11 @@ nav {
 
 .bottom-header {
   display: flex;
+  gap: 80px;
   justify-content: space-between;
   align-items: center;
   margin-block: 20px;
+  
 
   .logo {
     max-width: 750px;

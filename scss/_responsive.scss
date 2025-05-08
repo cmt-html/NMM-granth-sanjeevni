@@ -1,0 +1,182 @@
+@media (max-width: 1024px) {
+  .hero-banner .inner-content h1 {
+    font-size: 48px;
+  }
+  .login-options ul li button,
+  .login-options ul li .button,
+  nav ul li a,
+  nav ul li .button,
+  .advance-search-btn a,
+  .manuscripts > ul > li .maybecards *,
+  .bg-fill {
+    font-size: 16px;
+  }
+
+  .search-tab .input-search input {
+    padding: 15px 20px;
+  }
+
+  .search-tab .tab-button button,
+  .search-tab .input-search input::placeholder,
+  .unveiling p {
+    font-size: 14px;
+  }
+
+  .unveiling h2,
+  .head,
+  .head h2 {
+    font-size: 36px;
+  }
+
+  .footer-cont-wrap h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-banner {
+    .img-wrraper {
+      height: 60vh;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .footer-cont-wrap h2 {
+    flex: 0 0 50%;
+  }
+
+  .bottom-foo {
+    flex-direction: column-reverse;
+    gap: 20px;
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .foo-logo {
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .hero-banner .inner-content h1 {
+    font-size: 40px;
+  }
+  .hero-banner .inner-content {
+    margin: 0;
+  }
+
+  .unveiling h2,
+  .head,
+  .head h2 {
+    font-size: 32px;
+  }
+
+  .manuscripts > ul > li .maybecards {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .manuscripts > ul > li .thumb {
+    flex: 0 0 100%;
+    width: 100%;
+
+    img {
+      max-width: 220px;
+      margin: 17px auto;
+      display: block;
+    }
+
+    .thumb-bg-circle {
+      transform: translate(-50%, -60%);
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .preview-btns {
+    justify-content: center;
+  }
+  .footer-cont-wrap h2 {
+    flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-banner .inner-content h1 {
+    font-size: 30px;
+  }
+
+  .search-tab .tab-button .btns-wrapper {
+    width: 100%;
+    display: flex;
+
+    button {
+      flex: 0 0 50%;
+    }
+  }
+
+  .search-tab .input-search input {
+    border-radius: 0 0 10px 10px;
+  }
+
+  .search-tab .tab-button button,
+  .search-tab .input-search input::placeholder,
+  .unveiling p {
+    font-size: 12px;
+  }
+
+  .login-options ul li button,
+  .login-options ul li .button,
+  nav ul li a,
+  nav ul li .button,
+  .advance-search-btn a,
+  .manuscripts > ul > li .maybecards *,
+  .bg-fill {
+    font-size: 12px;
+  }
+
+  .unveiling h2,
+  .head,
+  .head h2 {
+    font-size: 34px;
+  }
+
+  main > section {
+    margin-bottom: 30px;
+  }
+
+  .manuscripts > ul {
+    > li .maybecards * {
+      font-size: 18px;
+    }
+  }
+
+  .manuscripts > ul > li .matbecards-wrap .top-sec ul {
+    gap: 0px;
+    margin-bottom: 0px;
+  }
+
+  footer {
+    text-align: center;
+    .foo-logo {
+      margin: auto;
+    }
+    .footer-cont-wrap {
+      margin-bottom: 0;
+      ul {
+        width: 100%;
+        margin: 35px 0;
+      }
+    }
+  }
+}

@@ -5,7 +5,7 @@ main {
 }
 
 
-a, button {
+a, button, .button {
   transition: all 0.3s ease-in-out;
   &:hover {
     color: $black;

@@ -35,9 +35,6 @@ $(document).ready(function () {
   });
 });
 
-
-
-
 $(document).ready(function () {
   // Dropdown handling
   $(".wrap button").on("click", function (e) {
@@ -53,5 +50,18 @@ $(document).ready(function () {
     if (!$(e.target).closest("button, div.select").length) {
       $("div.select").slideUp();
     }
+  });
+
+  // Password visibility toggle
+});
+
+document.querySelectorAll(".toggle-password").forEach(function (icon) {
+  icon.addEventListener("click", function () {
+    const input = document.querySelector(icon.getAttribute("toggle"));
+    const isPassword = input.type === "password";
+    input.type = isPassword ? "text" : "password";
+
+    icon.classList.toggle("fa-eye");
+    icon.classList.toggle("fa-eye-slash");
   });
 });

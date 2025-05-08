@@ -23,7 +23,7 @@ canvas {
 }
 
 .modal {
-  * {
+  *:not(.fa) {
     font-family: $albert;
     color: #2a2a2a;
   }
@@ -107,6 +107,7 @@ canvas {
   padding-block: 30px;
   font-size: $font-24;
   font-weight: 500;
+  border: none;
 }
 
 .btn-bg-dark {
@@ -145,9 +146,40 @@ canvas {
   color: $primary-color;
 }
 
+.refresh-btn {
+  img {
+    max-width: 20px;
+  }
+}
 
-.refresh-btn{
-    img{
-        max-width: 20px;
-    }
+.static-modal {
+  border-radius: $border-radius-40;
+  background-image: url("../images/dark-dusty-library.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-block: 60px;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  .modal {
+    display: block;
+    position: relative;
+  }
+
+  .modal-content {
+    backdrop-filter: blur(8px);
+    background: #ffffffdb;
+  }
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 42px;
+  right: 20px;
+  cursor: pointer;
+  color: #2a2a2a;
+  font-size: 22px;
 }

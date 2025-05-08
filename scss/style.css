@@ -104,7 +104,7 @@ nav ul li {
   margin-bottom: 10px;
   position: relative;
 }
-nav ul li a {
+nav ul li a, nav ul li .button {
   color: #444341;
   font-size: 18px;
   font-weight: 400;
@@ -171,11 +171,12 @@ nav ul li.active::after {
 .login-options ul li {
   position: relative;
 }
-.login-options ul li button {
+.login-options ul li button, .login-options ul li .button {
   font-size: 18px;
   font-family: "Albert Sans", sans-serif;
   font-weight: 600;
   text-decoration: underline;
+  color: #1c1c1c;
 }
 
 .hero-banner {
@@ -431,6 +432,7 @@ footer * {
 }
 .footer-cont-wrap h2 {
   color: #E5E1D5;
+  flex: 0 0 60%;
 }
 .footer-cont-wrap ul {
   display: flex;
@@ -477,7 +479,7 @@ canvas {
           backdrop-filter: blur(8px);
 }
 
-.modal * {
+.modal *:not(.fa) {
   font-family: "Albert Sans", sans-serif;
   color: #2a2a2a;
 }
@@ -549,6 +551,7 @@ canvas {
   padding-block: 30px;
   font-size: 24px;
   font-weight: 500;
+  border: none;
 }
 
 .btn-bg-dark {
@@ -587,6 +590,38 @@ canvas {
 
 .refresh-btn img {
   max-width: 20px;
+}
+
+.static-modal {
+  border-radius: 40px;
+  background-image: url("../images/dark-dusty-library.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-block: 60px;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+.static-modal .modal {
+  display: block;
+  position: relative;
+}
+.static-modal .modal-content {
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.8588235294);
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 42px;
+  right: 20px;
+  cursor: pointer;
+  color: #2a2a2a;
+  font-size: 22px;
 }
 
 .card-sec-options-controls {

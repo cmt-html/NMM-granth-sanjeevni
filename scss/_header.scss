@@ -10,7 +10,7 @@ nav {
     li {
       margin-bottom: 10px;
       position: relative;
-      a {
+      a, .button {
         color: $black;
         font-size: $font-18;
         font-weight: 400;
@@ -90,11 +90,12 @@ nav {
     li {
       position: relative;
 
-      button {
+      button, .button {
         font-size: $font-18;
         font-family: $albert;
         font-weight: 600;
         text-decoration: underline;
+        color: $dark;
       }
     }
   }

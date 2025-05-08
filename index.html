@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Granth Sanjeevni </title>
+    <title> National Mission for Manuscripts </title>
 
     <link rel="icon" type="image/png" href="/images/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" />
@@ -49,8 +49,8 @@
 
                     <div class="login-options">
                         <ul>
-                            <li><button data-bs-toggle="modal" data-bs-target="#register">Registration</button></li>
-                            <li><button class="bg-fill" data-bs-toggle="modal" data-bs-target="#login">login</button>
+                            <li><a class="button" href="/register.html">Registration</a></li>
+                            <li><a class="button bg-fill" href="/login.html">login </a>
                             </li>
                         </ul>
                     </div>
@@ -255,7 +255,7 @@
                     </div>
 
                     <div class="footer-cont-wrap">
-                        <h2> Lorem ipsum dolor sit amet,consectetur<br> adipiscing elit sed do eiusmod tempor. </h2>
+                        <h2> Ancient Indian manuscripts, now digitally preserved and open for exploration at your fingertips. </h2>
                         <ul>
                             <li><a href="/">Home</a></li>
                             <li><a href="#">About Us</a></li>
@@ -281,162 +281,6 @@
 
 
 
-    <!-- Login Modal -->
-    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
-                    <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button> -->
-                </div>
-                <div class="modal-body">
-                    <form id="login-form">
-                        <div class="form-group">
-                            <label for="login-email">Username*</label>
-                            <input type="email" id="login-email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="login-password">Password*</label>
-                            <input type="password" id="login-password" class="form-control" required>
-                            <p class="text-end">
-                                <button class="forgot-pass" type="button" data-bs-toggle="modal"
-                                    data-bs-target="#forgot" data-bs-dismiss="modal">Forgot Password?</button>
-                            </p>
-                        </div>
-                        <div class="form-group">
-                            <label for="login-captcha-input"> Please Enter Captha* </label>
-                            <div class="captcha-show">
-                                <div class="captcha-input">
-                                    <input type="text" id="login-captcha-input" placeholder="Enter CAPTCHA"
-                                        class="form-control" required>
-
-                                </div>
-                                <canvas id="login-captcha" class="border rounded captcha-canvas" height="100"></canvas>
-                                <button type="button" id="refresh-login-captcha"
-                                    class="btn btn-sm border-0 refresh-btn">
-                                    <img src="/images/icons/refresh.svg" alt="refresh">
-                                </button>
-                            </div>
-
-
-
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="custm-btn btn-bg-dark mb-2 ">Login</button>
-
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Forgot Modal -->
-    <div class="modal fade" id="forgot" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="registerModalLabel">Forgot Password</h5>
-                    <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                     <span aria-hidden="true">×</span>
-                 </button> -->
-                </div>
-                <div class="modal-body">
-                    <form id="register-form" method="POST">
-                        <div class="form-group">
-                            <label for="register-email">Email Id</label>
-                            <input type="email" id="register-email" name="email" placeholder="Enter your email"
-                                class="form-control" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="login-captcha-input"> Please Enter Captha* </label>
-                            <div class="captcha-show">
-                                <div class="captcha-input">
-                                    <input type="text" id="register-captcha-input" placeholder="Enter CAPTCHA"
-                                        class="form-control" required>
-
-                                </div>
-                                <canvas id="register-captcha" class="border rounded captcha-canvas"
-                                    height="100"></canvas>
-                                <button type="button" id="refresh-register-captcha"
-                                    class="btn btn-sm border-0 refresh-btn">
-                                    <img src="/images/icons/refresh.svg" alt="refresh">
-                                </button>
-                            </div>
-
-
-
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="custm-btn btn-bg-dark mb-4">Send Link</button>
-
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Register Modal -->
-    <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="registerModalLabel">Register</h5>
-                    <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button> -->
-                </div>
-                <div class="modal-body">
-                    <form id="register-form" method="POST">
-                        <div class="form-group">
-                            <label for="register-email">Email Id</label>
-                            <input type="email" id="register-email" name="email" placeholder="Enter your email"
-                                class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="register-password">Password</label>
-                            <input type="password" id="register-password" name="password"
-                                placeholder="Enter your password" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="login-captcha-input"> Please Enter Captha* </label>
-                            <div class="captcha-show">
-                                <div class="captcha-input">
-                                    <input type="text" id="register-captcha-input" placeholder="Enter CAPTCHA"
-                                        class="form-control" required>
-
-                                </div>
-                                <canvas id="register-captcha" class="border rounded captcha-canvas"
-                                    height="100"></canvas>
-                                <button type="button" id="refresh-register-captcha"
-                                    class="btn btn-sm border-0 refresh-btn">
-                                    <img src="/images/icons/refresh.svg" alt="refresh">
-                                </button>
-                            </div>
-
-
-
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="custm-btn btn-bg-dark mb-4">Register</button>
-                            <p class="text-center">
-                                Already have an account?
-                                <button type="button" data-bs-toggle="modal" data-bs-target="#login"
-                                    data-bs-dismiss="modal">Login</button>
-                            </p>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 

@@ -5,6 +5,20 @@ const MainObj = {
       inputElement.focus();
     }
   },
+
+  filterMenu: function (btn, menu) {
+    const button = document.querySelector(btn);
+    const menuToggle = document.querySelector(menu);
+
+    if (button && menuToggle) {
+      button.addEventListener("click", () => {
+        $(menuToggle).fadeToggle();
+      });
+    }
+  },
+
+
+
 };
 
 $(document).ready(function () {
@@ -38,7 +52,6 @@ $(document).ready(function () {
 $(document).ready(function () {
   // Dropdown handling
   $(".wrap button").on("click", function (e) {
-    console.log("clicked");
     e.preventDefault();
     let $dropdown = $(this).siblings("div.select");
     $dropdown.slideToggle();
@@ -53,6 +66,8 @@ $(document).ready(function () {
   });
 
   // Password visibility toggle
+
+  MainObj.filterMenu(".mobile-setting-icon", ".mob-menu-wrap");
 });
 
 document.querySelectorAll(".toggle-password").forEach(function (icon) {
@@ -65,3 +80,16 @@ document.querySelectorAll(".toggle-password").forEach(function (icon) {
     icon.classList.toggle("fa-eye-slash");
   });
 });
+
+
+
+
+
+  const correctPassword = "Admin@123"; // Change this password
+
+  const userInput = prompt("Enter the website password:");
+
+  if (userInput !== correctPassword) {
+    alert("Incorrect password. You will be redirected.");
+    window.location.href = "/"; // Or close the tab or redirect elsewhere
+  }

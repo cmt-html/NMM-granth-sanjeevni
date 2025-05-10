@@ -16,9 +16,6 @@ const MainObj = {
       });
     }
   },
-
-
-
 };
 
 $(document).ready(function () {
@@ -85,11 +82,23 @@ document.querySelectorAll(".toggle-password").forEach(function (icon) {
 
 
 
-  const correctPassword = "Admin@123"; // Change this password
+const overlay = document.getElementById("overlay");
 
+// Define your correct password (consider more secure alternatives for production)
+const correctPassword = "Admin@123"; // Replace with your actual password
+
+// Check authentication
+if (!sessionStorage.getItem("authenticated")) {
+  overlay.style.display = "block"; // Show overlay before prompt
   const userInput = prompt("Enter the website password:");
 
-  if (userInput !== correctPassword) {
+  if (userInput === correctPassword) {
+    sessionStorage.setItem("authenticated", "true");
+    overlay.style.display = "none";
+  } else {
     alert("Incorrect password. You will be redirected.");
-    window.location.href = "/"; // Or close the tab or redirect elsewhere
+    window.location.href = "/";
   }
+} else {
+  overlay.style.display = "none";
+}

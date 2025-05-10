@@ -49,13 +49,15 @@ img {
 }
 
 input::-moz-placeholder {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
+  font-family: "Albert Sans", sans-serif;
 }
 
 input::placeholder {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
+  font-family: "Albert Sans", sans-serif;
 }
 
 @font-face {
@@ -143,23 +145,53 @@ input::placeholder {
   z-index: 999999999999999;
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#overlay .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#overlay .static-modal {
+  background: none;
+  width: 100%;
+}
+#overlay .static-modal .prev-btn {
+  max-width: 160px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 main > section {
   margin-bottom: 64px;
 }
 
-a, button, .button {
+a,
+button,
+.button {
   transition: all 0.3s ease-in-out;
 }
-a:hover, button:hover, .button:hover {
+a:hover,
+button:hover,
+.button:hover {
   color: #444341;
 }
-a:active, button:active, .button:active {
+a:active,
+button:active,
+.button:active {
   transform: scale(0.9);
 }
 
+@media (max-width: 767px) {
+  #overlay .modal-title {
+    font-size: 18px;
+  }
+}
 nav {
   border-bottom: 1px solid #eee5dd;
   margin-block-start: 30px;
@@ -548,8 +580,8 @@ footer * {
   width: 100%;
   text-align: center;
   font-weight: 700;
-  font-size: var(--font-size-lg);
-  color: var(--primary-color);
+  font-size: 24px;
+  font-family: "Albert Sans", sans-serif;
 }
 
 .modal-footer {
@@ -582,30 +614,28 @@ canvas {
 }
 .modal form .form-group label {
   font-weight: 600;
-  font-size: var(--font-size-md);
-  color: var(--secondary-text-color);
+  font-size: 16px;
+  color: #1c1c1c;
   margin-bottom: 7px;
 }
 .modal form .form-group input {
-  border: 1px solid #737373;
+  border: 1px solid #1c1c1c;
   padding: 10px 16px;
   border-radius: 40px;
   background-color: transparent;
   width: 100%;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
-  font-size: var(--font-size-md);
+  font-size: 18px;
   position: relative;
 }
 .modal form .form-group p {
   font-weight: 400;
-  font-size: var(--font-size-md);
-  color: var(--secondary-text-color);
-}
-.modal form .form-group p button {
-  color: var(--primary-color);
-  font-weight: 600;
-  background-color: transparent;
+  font-size: 16px;
+  color: #1c1c1c button;
+  color-color: #1c1c1c;
+  color-font-weight: 600;
+  color-background-color: transparent;
 }
 .modal button.close {
   background-color: transparent;
@@ -751,7 +781,8 @@ canvas {
 .wrap .select {
   display: none;
   position: absolute;
-  top: 54px;
+  left: 0;
+  top: 50px;
   z-index: 9;
   background-color: #fff;
   width: 150px;
@@ -897,6 +928,12 @@ canvas {
   display: none;
 }
 
+@media (min-width: 767px) {
+  .hamburger,
+  .mobile-menu {
+    display: none;
+  }
+}
 @media (max-width: 1100px) {
   .dropdown-options .wrap {
     padding: 10px 25px;
@@ -950,6 +987,12 @@ canvas {
   }
 }
 @media (max-width: 992px) {
+  .bottom-header .logo ul li {
+    max-width: 250px;
+  }
+  .bottom-header .logo ul li:not(:first-child) {
+    display: none;
+  }
   .hero-banner .img-wrraper {
     height: 60vh;
   }
@@ -977,6 +1020,9 @@ canvas {
   .mobile-setting-icon {
     display: block;
     cursor: pointer;
+    padding: 8px;
+    background: #fff;
+    border-radius: 5px;
   }
   .dropdown-options {
     position: absolute;
@@ -1003,6 +1049,52 @@ canvas {
   }
 }
 @media (max-width: 767px) {
+  .hamburger,
+  .mobile-menu {
+    display: block;
+    transition: all 0.5s ease-in-out;
+  }
+  .menu-wrraper {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    margin: 50px auto;
+  }
+  .menu-wrraper .close {
+    box-shadow: -6px 8px 14px 0px rgba(75, 75, 75, 0.2509803922);
+    position: absolute;
+    right: -20px;
+    top: -30px;
+    border-radius: 50%;
+    padding: 5px;
+  }
+  .menu-wrraper nav {
+    margin-bottom: 50px;
+  }
+  .menu-wrraper nav ul {
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-wrraper nav ul a {
+    font-size: 18px;
+  }
+  .mobile-menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    background: #fff;
+    z-index: 99999999;
+    width: 100%;
+    height: 100%;
+  }
+  .mobile-menu.active {
+    top: 0;
+  }
+  .hamburger {
+    max-width: 30px;
+    display: block;
+  }
   .container {
     padding: 0 10px;
   }
@@ -1055,6 +1147,9 @@ canvas {
   }
 }
 @media (max-width: 600px) {
+  .bottom-header .logo ul li {
+    max-width: 160px;
+  }
   .hero-banner .inner-content h1 {
     font-size: 30px;
   }

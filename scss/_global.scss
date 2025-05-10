@@ -1,4 +1,4 @@
-#overlay{
+#overlay {
   position: fixed;
   left: 0;
   top: 0;
@@ -6,11 +6,30 @@
   height: 100%;
   z-index: 999999999999999;
   backdrop-filter: blur(20px);
-  display: block;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .static-modal {
+    background: none;
+    width: 100%;
+
+    .prev-btn {
+      max-width: 160px;
+      width: 100%;
+      margin: auto;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+  }
 }
-
-
-
 
 main {
   > section {
@@ -18,8 +37,9 @@ main {
   }
 }
 
-
-a, button, .button {
+a,
+button,
+.button {
   transition: all 0.3s ease-in-out;
   &:hover {
     color: $black;
@@ -27,5 +47,13 @@ a, button, .button {
 
   &:active {
     transform: scale(0.9);
+  }
+}
+
+@media (max-width: 767px) {
+  #overlay {
+    .modal-title {
+      font-size: $font-18;
+    }
   }
 }

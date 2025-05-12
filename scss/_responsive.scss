@@ -151,14 +151,17 @@
 
   .menu-wrraper {
     position: relative;
-    max-width: 300px;
+    max-width: 90%;
     width: 100%;
     margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .close {
       box-shadow: $shadow;
       position: absolute;
-      right: -20px;
+      right: 0px;
       top: -30px;
       border-radius: 50%;
       padding: 5px;
@@ -166,6 +169,7 @@
 
     nav {
       margin-bottom: 50px;
+              flex-direction: column;
       ul {
         padding-bottom: 50px;
         display: flex;
@@ -219,7 +223,7 @@
 
   .manuscripts > ul > li .maybecards {
     flex-direction: column;
-    gap: 35px;
+    gap: 35px !important;
   }
 
   .manuscripts > ul > li .thumb {
@@ -256,6 +260,34 @@
 
   .print-icon {
     display: none;
+  }
+
+  .static-modal {
+    margin-left: -10px;
+    margin-right: -10px;
+    padding-block: 90px;
+  }
+
+  .modal .modal-body {
+    padding-inline: 15px;
+  }
+
+  .captcha-show {
+    flex-direction: column-reverse;
+    position: relative;
+
+    .captcha-canvas {
+      max-width: 85%;
+      width: 100%;
+      border-radius: 40px !important;
+    }
+
+    .refresh-btn {
+      position: absolute;
+      right: 0;
+      top: 10px;
+      flex: 0 0 30px;
+    }
   }
 }
 

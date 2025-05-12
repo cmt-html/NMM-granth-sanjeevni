@@ -196,6 +196,23 @@ nav {
   border-bottom: 1px solid #eee5dd;
   margin-block-start: 30px;
   margin-block-end: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+nav .header-search form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+nav .header-search form input {
+  border: none;
+  padding: 0 8px;
+  outline: none;
+  font-family: "Albert Sans", sans-serif;
+  font-size: 18px;
+}
+nav .header-search form button img {
+  max-width: 20px;
 }
 nav ul {
   display: flex;
@@ -206,7 +223,8 @@ nav ul li {
   margin-bottom: 10px;
   position: relative;
 }
-nav ul li a, nav ul li .button {
+nav ul li a,
+nav ul li .button {
   color: #444341;
   font-size: 18px;
   font-weight: 400;
@@ -274,7 +292,8 @@ nav ul li.active::after {
 .login-options ul li {
   position: relative;
 }
-.login-options ul li button, .login-options ul li .button {
+.login-options ul li button,
+.login-options ul li .button {
   font-size: 18px;
   font-family: "Albert Sans", sans-serif;
   font-weight: 600;
@@ -698,12 +717,13 @@ canvas {
   width: 100%;
   border-radius: 40px !important;
   height: 50px;
+  max-height: 50px;
   border-radius: 40px !important;
 }
 
 .captcha-canvas {
   background: #1c1c1c;
-  color: #f5ba24;
+  color: #f5ba24 !important;
 }
 
 .refresh-btn img {
@@ -1056,20 +1076,24 @@ canvas {
   }
   .menu-wrraper {
     position: relative;
-    max-width: 300px;
+    max-width: 90%;
     width: 100%;
     margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .menu-wrraper .close {
     box-shadow: -6px 8px 14px 0px rgba(75, 75, 75, 0.2509803922);
     position: absolute;
-    right: -20px;
+    right: 0px;
     top: -30px;
     border-radius: 50%;
     padding: 5px;
   }
   .menu-wrraper nav {
     margin-bottom: 50px;
+    flex-direction: column;
   }
   .menu-wrraper nav ul {
     padding-bottom: 50px;
@@ -1114,7 +1138,7 @@ canvas {
   }
   .manuscripts > ul > li .maybecards {
     flex-direction: column;
-    gap: 35px;
+    gap: 35px !important;
   }
   .manuscripts > ul > li .thumb {
     flex: 0 0 100%;
@@ -1144,6 +1168,29 @@ canvas {
   }
   .print-icon {
     display: none;
+  }
+  .static-modal {
+    margin-left: -10px;
+    margin-right: -10px;
+    padding-block: 90px;
+  }
+  .modal .modal-body {
+    padding-inline: 15px;
+  }
+  .captcha-show {
+    flex-direction: column-reverse;
+    position: relative;
+  }
+  .captcha-show .captcha-canvas {
+    max-width: 85%;
+    width: 100%;
+    border-radius: 40px !important;
+  }
+  .captcha-show .refresh-btn {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    flex: 0 0 30px;
   }
 }
 @media (max-width: 600px) {

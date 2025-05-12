@@ -135,13 +135,14 @@ canvas {
     width: 100%;
     border-radius: 40px !important;
     height: 50px;
+    max-height: 50px;
     border-radius: $border-radius-40 !important;
   }
 }
 
 .captcha-canvas {
   background: $dark;
-  color: $primary-color;
+  color: $primary-color !important;
 }
 
 .refresh-btn {
